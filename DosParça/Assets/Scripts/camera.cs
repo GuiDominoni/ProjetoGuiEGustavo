@@ -1,36 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class camera : MonoBehaviour
 {
 
-
     public Rigidbody2D rb;
-    public float speed, jumpForce;
     // Start is called before the first frame update
     void Start()
     {
-
         rb = GetComponent<Rigidbody2D>();
-        jumpForce = 1000;
-
-
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        rb.velocity = Vector2.right * speed;
-        if (Input.GetButtonDown("Jump"))
-        
-        {
+        rb.velocity = Vector2.right * 5;
 
-            rb.AddForce(Vector2.up * jumpForce);
-
-        }
 
     }
 }
