@@ -6,16 +6,18 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
 
-
+    
     public Rigidbody2D rb;
     public float speed, jumpForce;
+    public bool isGround;
+    public Transform foot;
     // Start is called before the first frame update
     void Start()
     {
 
         rb = GetComponent<Rigidbody2D>();
-   
-
+            
+        isGround = Physics2D.OverlapCircle(foot.position, 0.05f);
 
     }
 
@@ -24,7 +26,7 @@ public class Player : MonoBehaviour
     {
 
         rb.velocity = Vector2.right * speed;
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") && isGround)
         
         {
 
