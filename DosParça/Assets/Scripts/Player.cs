@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
     {
 
         rb = GetComponent<Rigidbody2D>();
-        jumpForce = 1000;
+   
 
 
     }
