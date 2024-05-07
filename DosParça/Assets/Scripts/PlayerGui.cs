@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerGui : MonoBehaviour
 {
     public float horizontal;
-    public float speed = 10, jumpStrengt;
+    public float speed = 10, jumpStrengt = 3;
     public Rigidbody2D body;
     bool groundCheck;
     public Transform foot;
