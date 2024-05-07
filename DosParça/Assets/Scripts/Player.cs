@@ -35,4 +35,20 @@ public class Player : MonoBehaviour
         }
 
     }
+
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+
+
+        if (collision.gameObject.CompareTag("Esp"))
+        {
+
+
+            Destroy(gameObject);
+
+
+        }
+
+    }
 }
